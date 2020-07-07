@@ -84,7 +84,7 @@ namespace TechJobsTests
         [TestMethod]
         public void TestJobToStringEmptyField()
         {
-            Job testJob = new Job();
+            Job testJob = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
 
             string emptyFieldString = "Data not available";
             string expectedOutput = String.Format("\nId: {0}\nName: {1}\nEmployer: {2}\nLocation: {3}\nPosition Type: {4}\nCore Competency: {5}\n", testJob.Id, emptyFieldString, emptyFieldString, emptyFieldString, emptyFieldString, emptyFieldString);

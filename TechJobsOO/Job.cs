@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.InteropServices.WindowsRuntime;
+
 namespace TechJobsOO
 {
     public class Job
@@ -43,12 +45,12 @@ namespace TechJobsOO
             string emptyMessage = "Data not available";
 
             string retMessage = "\n";
-            retMessage += "Id: " + (Id != null ? Id.ToString() : emptyMessage) + "\n";
-            retMessage += "Name: " + (Name != null ? Name.ToString() : emptyMessage) + "\n";
-            retMessage += "Employer: " + (EmployerName != null ? EmployerName.ToString() : emptyMessage) + "\n";
-            retMessage += "Location: " + (EmployerLocation != null ? EmployerLocation.ToString() : emptyMessage) + "\n";
-            retMessage += "Position Type: " + (JobType != null ? JobType.ToString() : emptyMessage) + "\n";
-            retMessage += "Core Competency: " + (JobCoreCompetency != null ? JobCoreCompetency.ToString() : emptyMessage) + "\n";
+            retMessage += "Id: " + Id + "\n";
+            retMessage += "Name: " + (Name != "" ? Name.ToString() : emptyMessage) + "\n";
+            retMessage += "Employer: " + (EmployerName.ToString() != "" ? EmployerName.ToString() : emptyMessage) + "\n";
+            retMessage += "Location: " + (EmployerLocation.ToString() != "" ? EmployerLocation.ToString() : emptyMessage) + "\n";
+            retMessage += "Position Type: " + (JobType.ToString() != "" ? JobType.ToString() : emptyMessage) + "\n";
+            retMessage += "Core Competency: " + (JobCoreCompetency.ToString() != "" ? JobCoreCompetency.ToString() : emptyMessage) + "\n";
 
             return retMessage;
         }

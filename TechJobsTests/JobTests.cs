@@ -29,10 +29,10 @@ namespace TechJobsTests
             Job testJob = new Job(name, employerName, employerLocation, jobType, jobCoreCompetency);
 
             Assert.AreEqual(testJob.Name, name);
-            Assert.AreEqual(testJob.EmployerName.ToString(), employerName.ToString());
-            Assert.AreEqual(testJob.EmployerLocation.ToString(), employerLocation.ToString());
-            Assert.AreEqual(testJob.JobType.ToString(), jobType.ToString());
-            Assert.AreEqual(testJob.JobCoreCompetency.ToString(), jobCoreCompetency.ToString());
+            Assert.AreEqual(testJob.EmployerName, employerName);
+            Assert.AreEqual(testJob.EmployerLocation, employerLocation);
+            Assert.AreEqual(testJob.JobType, jobType);
+            Assert.AreEqual(testJob.JobCoreCompetency, jobCoreCompetency);
         }
 
         [TestMethod]
